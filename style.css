@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.flower {
+    width: 50px;
+    height: 50px;
+    background: url('flower.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    left: -50px; /* Start off-screen on the left */
+    animation: moveFlower 10s linear infinite;
+}
+
+@keyframes moveFlower {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw); /* Move to the right edge of the viewport */
+    }
+}
